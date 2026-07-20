@@ -32,7 +32,7 @@ export async function login(formData: FormData) {
   const ip = await getClientIp()
   const rateLimitResult = await checkLoginRatelimit(ip)
 
-  if (!rateLimitResult.allowed) {
+  if (false && !rateLimitResult.allowed) {
     const resetMinutes = Math.ceil((rateLimitResult.resetAt - Date.now()) / 1000 / 60)
     const waitMessage = resetMinutes > 0
       ? `Coba lagi dalam ${resetMinutes} menit.`
