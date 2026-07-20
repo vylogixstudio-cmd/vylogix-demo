@@ -77,7 +77,7 @@ export async function updateWebhookUrl(formData: FormData) {
     .eq('id', orgId)
 
   if (error) {
-    return { error: 'Gagal menyimpan URL Webhook: ' + error.message }
+    return { error: 'Gagal menyimpan URL Webhook: ' + (error?.message || 'Unknown error') }
   }
 
   revalidatePath('/admin/dashboard')
