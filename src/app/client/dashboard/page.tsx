@@ -84,11 +84,18 @@ export default async function ClientDashboard({ searchParams }: { searchParams?:
             <h1 className="font-extrabold text-2xl text-[#111827] font-['Plus_Jakarta_Sans']">Client Portal</h1>
             <p className="text-[#4B5563] text-sm mt-1">Pantau perkembangan proyek Anda secara real-time.</p>
           </div>
-          <form action={logout}>
-            <button type="submit" className="flex items-center gap-2 text-xs font-bold text-[#4B5563] hover:text-rose-500 px-5 py-2.5 border border-black/10 rounded-[12px] hover:bg-rose-50 hover:border-rose-200 transition-all shadow-sm bg-[#F8F9FA]">
-              <LogOut size={16} /> Logout Portal
-            </button>
-          </form>
+          <div className="flex flex-wrap items-center gap-2 mt-4 sm:mt-0">
+            {project && projects && projects.length > 1 && (
+              <Link href="/client/dashboard" className="flex items-center gap-2 text-xs font-bold text-[#4B5563] hover:text-[#2563EB] px-4 py-2.5 border border-black/10 rounded-[12px] hover:bg-blue-50 hover:border-blue-200 transition-all shadow-sm bg-[#F8F9FA]">
+                ← Daftar Proyek
+              </Link>
+            )}
+            <form action={logout}>
+              <button type="submit" className="flex items-center gap-2 text-xs font-bold text-[#4B5563] hover:text-rose-500 px-5 py-2.5 border border-black/10 rounded-[12px] hover:bg-rose-50 hover:border-rose-200 transition-all shadow-sm bg-[#F8F9FA]">
+                <LogOut size={16} /> Logout Portal
+              </button>
+            </form>
+          </div>
         </div>
 
         {projects && projects.length > 1 && !project ? (
@@ -126,12 +133,7 @@ export default async function ClientDashboard({ searchParams }: { searchParams?:
           </div>
         ) : project ? (
           <div className="space-y-6">
-            {/* Back Button for Multi-Project Clients */}
-            {projects && projects.length > 1 && (
-              <Link href="/client/dashboard" className="inline-flex items-center gap-2 text-xs font-bold text-[#4B5563] hover:text-[#2563EB] mb-2 px-3 py-1.5 bg-white border border-gray-200 rounded-lg hover:border-blue-200 transition-colors shadow-sm w-fit">
-                ← Kembali ke Daftar Proyek
-              </Link>
-            )}
+            {/* Back Button moved to Header */}
 
             {/* Project Status Card */}
             <div className="bg-white p-6 md:p-8 rounded-[20px] shadow-sm border border-black/5">

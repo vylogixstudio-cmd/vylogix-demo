@@ -143,7 +143,7 @@ export default async function AdminDashboard() {
               <p className="text-[#4B5563] text-sm mt-1">Sistem Manajemen {orgName}</p>
             </div>
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2 mt-4 sm:mt-0">
             <Link href="/admin/dashboard/audit" className="flex items-center gap-2 text-xs font-bold text-[#4B5563] hover:text-[#2563EB] px-4 py-2.5 border border-black/10 rounded-[12px] hover:bg-blue-50 hover:border-blue-200 transition-all shadow-sm bg-[#F8F9FA]">
               {/* Clipboard icon */}
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-4 h-4" aria-hidden="true">
