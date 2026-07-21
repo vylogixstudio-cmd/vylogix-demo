@@ -41,7 +41,7 @@ export default function AutoFillButtons() {
         </button>
       </div>
       <p className="text-[10px] text-center text-blue-600/70 font-medium mt-3 px-2">
-        ⚠️ Mohon hindari menekan tombol masuk berkali-kali dalam waktu singkat untuk mencegah pembatasan akses (rate limit) dari sistem keamanan kami.
+        💡 Proses login mungkin membutuhkan waktu 1-3 detik untuk sinkronisasi. Mohon bersabar setelah menekan tombol Akses Portal.
       </p>
     </div>
   )
